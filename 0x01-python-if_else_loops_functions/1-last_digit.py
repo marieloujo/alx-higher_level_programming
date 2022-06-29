@@ -2,7 +2,11 @@
 import random
 
 n = random.randint(-10000, 10000)
-lastDigit = int(str(n)[-1])
+
+if n < 0:
+    lastDigit = n % -10
+else:
+    lastDigit = n % 10
 
 if (lastDigit == 0):
     print("Last digit of {} is {} and is 0".format(n, lastDigit))
