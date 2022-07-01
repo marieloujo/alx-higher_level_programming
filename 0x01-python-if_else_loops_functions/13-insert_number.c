@@ -11,31 +11,32 @@
 listint_t *insert_node(listint_t **head, int number)
 {
 
-    listint_t *new = NULL, *current = NULL;
+	listint_t *new = NULL, *current = NULL;
 
-    if (!head)
-        return (NULL);
+	if (!head)
+		return (NULL);
 
-    if (!*head)
-        return add_nodeint_end(head, number);
+	if (!*head)
+		return (add_nodeint_end(head, number));
 
-    while (*head != NULL)
-    {
-        if ((*head)->n < number)
-        {
-            head = &((*head)->next);
-            continue;
-        }
-        else {
-            current = *head;
-            break;
-        }
-    }
+	while (*head != NULL)
+	{
+		if ((*head)->n < number)
+		{
+			head = &((*head)->next);
+			continue;
+		}
+		else
+		{
+			current = *head;
+			break;
+		}
+	}
 
-    *head = NULL;
-    new = add_nodeint_end(head, number);
-    (*head)->next = current;
+	*head = NULL;
+	new = add_nodeint_end(head, number);
+	(*head)->next = current;
 
-    return (new);
+	return (new);
 
 }
