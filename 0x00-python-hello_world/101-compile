@@ -1,4 +1,5 @@
 #!/bin/bash
 python -m compileall $PYFILE
-mv __pycache__/* $PYFILE'c'
+mv __pycache__/* ./$PYFILE'c'
 rmdir __pycache__
+chmod u+x ./$PYFILE'c'
