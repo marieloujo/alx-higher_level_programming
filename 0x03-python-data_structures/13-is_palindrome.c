@@ -35,7 +35,7 @@ int is_palindrome(listint_t **head)
 	size_t i, j;
 
 	if (!*head)
-		return (0);
+		return (1);
 
 	for (i = 0, j = size - 1; i < middle && j > middle; i++, j--)
 	{
