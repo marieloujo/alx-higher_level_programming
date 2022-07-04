@@ -14,6 +14,7 @@
 typedef struct listint_s
 {
     int n;
+    int isCheck;
     struct listint_s *next;
 } listint_t;
 
