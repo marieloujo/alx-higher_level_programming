@@ -42,10 +42,8 @@ int is_palindrome(listint_t **head)
 
 	for (i = 0, j = size - 1; i < middle && j > middle; i++, j--)
 	{
-		if ((*head + i)[i].n == (*head + j)[j].n)
-			isPalindrome = 1;
-		else
-		{
+		if ((*head + i)[i].n != (*head + j)[j].n)
+        {
 			isPalindrome = 0;
 			break;
 		}
@@ -55,9 +53,7 @@ int is_palindrome(listint_t **head)
 	{
 		i = middle - 1;
 
-		if ((*head + i)[i].n == (*head + middle)[middle].n)
-			isPalindrome = 1;
-		else
+		if ((*head + i)[i].n != (*head + middle)[middle].n)
 			isPalindrome = 0;
 	}
 
