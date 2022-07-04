@@ -9,18 +9,19 @@
  */
 int check_cycle(listint_t *list)
 {
-    listint_t *temp = malloc(sizeof(listint_t)), *next = NULL;
+	listint_t *temp = malloc(sizeof(listint_t)), *next = NULL;
 
-    while (list != NULL) {
-        if (list->next == NULL)
-            return (0);
+	while (list != NULL)
+	{
+		if (list->next == NULL)
+			return (0);
 
-        if (list->next == temp)
-            return (1);
+		if (list->next == temp)
+			return (1);
 
-        next = list->next;
-        list->next = temp;
-        list = next;
-    }
-    return (0);
+		next = list->next;
+		list->next = temp;
+		list = next;
+	}
+	return (0);
 }
