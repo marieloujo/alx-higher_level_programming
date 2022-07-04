@@ -3,12 +3,24 @@
 #include "lists.h"
 
 /**
- * check_cycle - hecks if a singly linked list has a cycle in it
+ * check_cycle - checks if a singly linked list has a cycle in it
  * @list: pointer to head of list
- * Return: number of nodes
+ * Return: 0 if there is no cycle, 1 if there is a cycle
  */
 int check_cycle(listint_t *list)
 {
-    list = list;
+    listint_t *temp = malloc(sizeof(listint_t)), *next = NULL;
+
+    while (list != NULL) {
+        if (list->next == NULL)
+            return (0);
+
+        if (list->next == temp)
+            return (1);
+
+        next = list->next;
+        list->next = temp;
+        list = next;
+    }
     return (0);
 }
