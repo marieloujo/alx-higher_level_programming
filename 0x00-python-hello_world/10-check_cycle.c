@@ -9,7 +9,5 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *temp = malloc(sizeof(listint_t)), *next = NULL;
-
 	return (0);
 }
