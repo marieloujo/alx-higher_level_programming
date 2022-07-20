@@ -47,3 +47,12 @@ class Square:
             Int: value of area
         """
         return self.__size * self.__size
+
+    def my_print(self):
+        """my_print - print square with '#' if empty size nothing is print"""
+        for row in range(self.size):
+            for iem in range(self.size):
+                print("#", end="")
+            print()
+        if self.size is 0:
+            print()
