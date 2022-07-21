@@ -89,4 +89,8 @@ class Square:
         Returns:
             Formatted string representing square
         """
-        self.my_print()
+        if self.size is 0:
+            return ""
+        string = "\n" * self.position[1] + (" " * self.position[0] +
+                                            "#" * self.size + "\n") * self.size
+        return string[:-1]
