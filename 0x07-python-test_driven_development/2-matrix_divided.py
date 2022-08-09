@@ -20,6 +20,9 @@ def matrix_divided(matrix, div):
     if type(matrix) is not list:
         raise TypeError("matrix must be a matrix (list of lists) \
             of integers/floats")
+    if len(matrix) == 0:
+        raise TypeError("matrix must be a matrix (list of lists) \
+            of integers/floats")
     for row in matrix:
         if type(row) is not list:
             raise TypeError("matrix must be a matrix (list of lists) \
