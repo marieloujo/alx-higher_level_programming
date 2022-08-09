@@ -28,6 +28,8 @@ class Rectangle:
         """Return the area of rectangle based
         on its width and height
         """
+        if self.width == 0 or self.height == 0:
+            return 0
         return self.width * self.height
 
     def perimeter(self):
