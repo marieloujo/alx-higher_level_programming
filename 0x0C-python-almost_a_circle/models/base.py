@@ -62,6 +62,6 @@ class Base:
                 objects = cls.from_json_string(f.read())
             for i in range(len(objects)):
                 objects[i] = cls.create(**objects[i])
-        except:
+        except BaseException:
             pass
         return objects
