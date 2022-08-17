@@ -2,7 +2,7 @@
 """ Module - rectangle """
 
 
-from models.base import Base
+Base = __import__('base').Base
 
 
 class Rectangle(Base):
@@ -86,8 +86,5 @@ class Rectangle(Base):
 
     def display(self):
         """ Prints rectangle with '#' charater """
-        if self.width == 0 and self.height == 0:
-            print()
-            return
-        print("".join(["#" for j in range(self.width)]
-              for i in range(self.height)))
+        for row in range(self.height):
+            print("{}".format("#" * self.height))
