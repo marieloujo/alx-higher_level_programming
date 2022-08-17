@@ -92,3 +92,9 @@ class Rectangle(Base):
         print("\n" * self.y, end='')
         print("\n".join((" " * self.x) + ("#" * self.width)
               for j in range(self.height)))
+
+    def update(self, *args):
+        """ Update the class Rectangle """
+        arguments = {0: 'id', 1: 'width', 2: 'height', 3: 'x', 4: 'y'}
+        for i in range(len(args)):
+            setattr(self, arguments[i], args[i])
