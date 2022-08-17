@@ -57,7 +57,6 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
-
     @property
     def y(self):
         """Retrieve of private attribute __y"""
@@ -82,10 +81,5 @@ class Rectangle(Base):
 
     def __str__(self):
         """ String representation of rectangle """
-        return "[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}".format(self=self)
-
-    def update(self, *args):
-        arguments = {0: 'id', 1: 'width', 2: 'height', 3: 'x', 4: 'y'}
-        for key, arg in args.items():
-            setattr(self, arguments[key], arg)
-
+        return "[Rectangle] ({self.id}) {self.x}/{self.y} - \
+                     {self.width}/{self.height}".format(self=self)
