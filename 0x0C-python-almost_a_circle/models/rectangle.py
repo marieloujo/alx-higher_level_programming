@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Module - rectangle """
+""" Module - rectangle
+from models.base import Base
+Base = __import__('base').Base
+"""
 
 
 from models.base import Base
@@ -81,8 +84,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """ String representation of rectangle """
-        return "[Rectangle] ({self.id}) {self.x}/{self.y} - \
-                     {self.width}/{self.height}".format(self=self)
+        return "[Rectangle] (" +\
+               "{s.id}) {s.x}/{s.y} - {s.width}/{s.height}".format(s=self)
 
     def display(self):
         """ Prints rectangle with '#' charater """
