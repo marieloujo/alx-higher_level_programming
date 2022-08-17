@@ -83,3 +83,11 @@ class Rectangle(Base):
         """ String representation of rectangle """
         return "[Rectangle] ({self.id}) {self.x}/{self.y} - \
                      {self.width}/{self.height}".format(self=self)
+
+    def display(self):
+        """ Prints rectangle with '#' charater """
+        if self.width == 0 and self.height == 0:
+            print()
+            return
+        print("".join(["#" for j in range(self.width)]
+              for i in range(self.height)))
