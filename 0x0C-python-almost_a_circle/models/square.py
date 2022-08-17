@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Module sqhare """
+""" Module sqhare
+Rectangle = __import__('rectangle').Rectangle
+from models.rectangle import Rectangle
+"""
 
 
 from models.rectangle import Rectangle
