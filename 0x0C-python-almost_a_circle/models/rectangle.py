@@ -93,8 +93,12 @@ class Rectangle(Base):
         print("\n".join((" " * self.x) + ("#" * self.width)
               for j in range(self.height)))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Update the class Rectangle """
-        arguments = {0: 'id', 1: 'width', 2: 'height', 3: 'x', 4: 'y'}
-        for i in range(len(args)):
-            setattr(self, arguments[i], args[i])
+        if (args):
+            arguments = {0: 'id', 1: 'width', 2: 'height', 3: 'x', 4: 'y'}
+            for i in range(len(args)):
+                setattr(self, arguments[i], args[i])
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
